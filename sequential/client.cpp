@@ -7,8 +7,6 @@
 #include <curl/curl.h>
 #include <stdexcept>
 #include "rapidjson/error/error.h"
-#include "rapidjson/reader.h"
-
 
 struct ParseException : std::runtime_error, rapidjson::ParseResult {
     ParseException(rapidjson::ParseErrorCode code, const char* msg, size_t offset) : 
@@ -19,6 +17,7 @@ struct ParseException : std::runtime_error, rapidjson::ParseResult {
 #define RAPIDJSON_PARSE_ERROR_NORETURN(code, offset) \
     throw ParseException(code, #code, offset)
 
+#include "rapidjson/reader.h"
 #include <rapidjson/document.h>
 #include <chrono>
 
