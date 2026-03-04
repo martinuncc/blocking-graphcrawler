@@ -8,6 +8,6 @@
 
 make
 ./client "Tom Hanks" 1
-./client "Tom Hanks" 2
+./client "Tom Hanks" 4
 ./blocking "Tom Hanks" 1
 ./blocking "Tom Hanks" 4
